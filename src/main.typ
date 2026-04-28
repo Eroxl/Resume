@@ -6,11 +6,34 @@
   margin: 1cm,
 )
 
+#let bold(content) = {
+  text(
+    weight: "bold",
+    content
+  )
+}
+
+#let section-header(content: "") = {
+  text(
+    weight: "bold",
+    size: 12pt,
+    fill: blue,
+    content
+  )
+
+  v(-1.2em)
+  
+  line(length: 100%, stroke: 0.25pt + blue)
+}
+
+#show link: set text(fill: blue)
+
 #header
 
 #set text(size: 10pt)
 
-== Work Experience
+
+#section-header(content: "Work Experience")
 
 #work(
 
@@ -23,10 +46,10 @@
     ),
   ),
   sections: (
-    "Architected a real-time telemetry dashboard to ingest and visualize 100+ live sensor signals at a 2MHz frequency, utilizing a high-throughput rust backend to handle massive data payloads.", 
-    "Optimized React rendering performance by diagnosing unstable array references and implementing fine-grained state subscriptions system, reducing chart-driven re-renders by 95% and ensuring UI responsiveness during high-speed data bursts.",
-    "Developed robust data visualization components capable of rendering high-density numerical datasets and enum timelines with sub-millisecond latency.",
-    "Introduced a custom level of detail system to dynamically adjust chart fidelity based on user interaction and data velocity, maintaining smooth performance even during telemetry and alert spikes."
+    "Architected a " + bold("real-time telemetry dashboard") + " to ingest and visualize 100+ live sensor signals at a " + bold("2MHz") + " frequency, utilizing a high-throughput rust backend to handle massive data payloads.", 
+    "Optimized React rendering performance by diagnosing unstable array references and implementing fine-grained state subscriptions system, reducing chart-driven re-renders by " + bold("95%") + " and ensuring UI responsiveness during high-speed data bursts.",
+    "Developed robust " + bold("data visualization components") + " capable of rendering high-density numerical datasets and enum timelines with " + bold("sub-millisecond") + " latency.",
+    "Introduced a custom " + bold("level of detail") + " system to dynamically adjust chart fidelity based on user interaction and data velocity, maintaining smooth performance even during telemetry and alert spikes."
   )
 )
 
@@ -51,13 +74,13 @@
   ),
   sections: (
     "Managed 40+ employees and served 300k+ annual customers, directing recruitment, training and safety.",
-    "Increased revenue by 15% and maximum capacity by 40% through operational improvements and scheduling optimization.",
-    "Migrated website, cutting load times by almost 50% and boosting SEO traffic to 30k+ monthly visitors.",
-    "Promoted twice within four years, from entry-level role to Operations Manager."
+    "Increased revenue by " + bold("15%") + " and maximum capacity by " + bold("40%") + " through operational improvements and scheduling optimization.",
+    "Migrated website, cutting load times by almost " + bold("50%") + " and boosting SEO traffic to " + bold("30k+") + " monthly visitors.",
+    "Promoted " + bold("twice within four years") + ", from entry-level role to Operations Manager."
   )
 )
 
-== Projects
+#section-header(content: "Projects")
 
 #work(
   company: "Gathr",
@@ -70,10 +93,10 @@
   ),
   sections: (
     "Architected a community embedding platform designed to aggregate streaming audiences into a unified, real-time environment.",
-    "Engineered a distributed real-time chat engine utilizing a Redis-backed Pub/Sub architecture to maintain synchronization and message ordering across multiple server instances.",
-    "Optimized high-traffic websocket communication to support thousands of concurrent connections, implementing custom message-batching and throttling logic.",
-    "Developed a modular emote and media rendering engine capable of parsing and injecting complex assets into high-velocity chat streams with minimal overhead.",
-    "Designed and implemented a custom user presence system to track and display real-time viewer engagement metrics across multiple channels, enhancing community interaction and retention."
+    "Engineered a " + bold("distributed real-time chat engine") + " utilizing a " + bold("Redis-backed Pub/Sub architecture") + " to maintain synchronization and message ordering across multiple server instances.",
+    "Optimized " + bold("high-traffic websocket communication") + " to support thousands of concurrent connections, implementing custom " + bold("message-batching") + " and " + bold("throttling") + " logic.",
+    "Developed a modular " + bold("emote and media rendering engine") + " capable of parsing and injecting complex assets into " + bold("high-velocity chat streams") + " with minimal overhead.",
+    "Designed and implemented a custom user presence system to track and display " + bold("real-time viewer engagement metrics") + " across multiple channels, enhancing community interaction and retention."
   )
 )
 
@@ -88,14 +111,14 @@
     ),
   ),
   sections: (
-    "Engineered a custom block-based editor in React/TypeScript, solving browser cursor API limitations with a custom position-tracking algorithm to resolve cursor location relative to dynamic line heights.",
-    "Architected a custom Retrieval-Augmented Generation system to provide context-aware AI assistance; developed an automated pipeline to generate document embeddings, indexed in Qdrant for semantic retrieval during inference.",
-    "Engineered the context injection layer that feeds high-relevance document segments to OpenAI's API, enabling the LLM to provide precise, ground-truth-based responses over private user data.",
-    "Published the editor core as a modular npm library and containerized the full stack with Docker Compose for high-availability production deployment."
+    "Engineered a custom block-based editor in React/TypeScript, solving browser cursor API limitations with a custom " + bold("position-tracking algorithm") + " to resolve cursor location relative to dynamic line heights.",
+    "Architected a custom " + bold("Retrieval-Augmented Generation") + " system to provide " + bold("context-aware AI assistance") + ", developed an automated pipeline to generate " + bold("document embeddings") + ", indexed in " + bold("Qdrant") + " for " + bold("semantic retrieval") + " during inference.",
+    "Engineered the context injection layer that feeds high-relevance document segments to OpenAI's API, enabling the LLM to provide " + bold("precise, ground-truth-based responses") + " over private user data.",
+    "Published the editor core as a " + bold("modular npm library") + " and " + bold("containerized") + " with Docker Compose for high-availability production deployment."
   )
 )
 
-== Education
+#section-header(content: "Education")
 
 #education(
   institution: "University of British Columbia",
@@ -114,7 +137,7 @@
   )
 )
 
-== Skills
+#section-header(content: "Skills")
 
 #skills(
   header: "Languages and Frameworks",

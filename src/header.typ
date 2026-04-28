@@ -1,7 +1,6 @@
 #import "@preview/dovenv:0.1.0": parse-env
 #import "@preview/one-liner:0.3.0": fit-to-width
 
-#show link: set text(fill: blue)
 #let hrule = line(length: 100%, stroke: 0.4pt)
 
 #let env = parse-env(read("../.env"))
@@ -34,7 +33,7 @@
 
 = #name
 
-#v(5pt)
+#v(2.5pt)
 
 #box(width: 90%)[
   #fit-to-width[
@@ -43,5 +42,3 @@
 ]
 
 #set align(left)
-
-#hrule

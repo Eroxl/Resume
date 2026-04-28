@@ -64,8 +64,6 @@
   )),
   sections: (),
 ) = {
-  show link: set text(fill: blue)
-
   text(weight: "bold", company) + " - " + underline(link("https://" + href, href))
 
   if positions.len() == 1 {
@@ -114,8 +112,6 @@
   end-date: "",
   relevant-courses: ()
 ) = {
-  show link: set text(fill: blue)
-
   text(weight: "bold", institution)
 
   "\n"
